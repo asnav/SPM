@@ -1,0 +1,33 @@
+.loginPage{
+    background-color: #D4AC2B;
+    width: auto;
+    height: auto;
+    position:relative;
+    margin-top: 30px;
+}
+p{
+    color: #B05E27;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 30px;
+}
+h1{
+    color: #B05E27;
+    font-weight: bold;
+    text-align: center;
+}
+div{
+    text-align: center;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+}
+label{
+    padding: 10px;
+    font-style: italic;
+    font-weight: 750;
+}
+button{
+    background: rgb(247, 218, 141);
+    font-weight: 750;
+}
