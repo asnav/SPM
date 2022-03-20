@@ -1,18 +1,13 @@
 .loginPage{
-    background-color: #D4AC2B;
+    background-color: #206F91;
     width: auto;
     height: auto;
     position:relative;
     margin-top: 30px;
 }
-p{
-    color: #B05E27;
-    font-weight: bold;
-    text-align: center;
-    padding-top: 30px;
-}
+
 h1{
-    color: #B05E27;
+    color: #86C7E2;
     font-weight: bold;
     text-align: center;
 }
@@ -28,6 +23,7 @@ label{
     font-weight: 750;
 }
 button{
-    background: rgb(247, 218, 141);
+    background: #86C7E2;
+    color: #206F91;
     font-weight: 750;
 }

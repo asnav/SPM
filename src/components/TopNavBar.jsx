@@ -5,9 +5,9 @@ import '../css/TopNavBar.css';
 const TopNavBar=()=>{
     return (
   <Navbar collapseOnSelect className='my-navbar' expand="lg" variant="dark">
-  <Navbar.Brand className="logo me-auto p-2" href="#home">CFN-Brand</Navbar.Brand>
+  <Navbar.Brand className="logo me-auto p-2" href="/">CFN-Brand</Navbar.Brand>
     <Nav>
-      <Nav.Link className="my-nav-link p-3" href="#loginregister">Login & Register</Nav.Link>
+      <Nav.Link className="my-nav-link p-3" href="/Login">Login</Nav.Link>
      
     </Nav>
   

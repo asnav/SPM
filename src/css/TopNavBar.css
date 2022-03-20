@@ -1,10 +1,14 @@
 .logo{
+    color: #86C7E2!important;
     font-weight: 500;
 }
 .my-navbar{
-    background-color:#FFCE45;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    background-color:#206F91;
   
 }
 .my-nav-link{
-    color:black !important;
+    color:#86C7E2 !important;
 }

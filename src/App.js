@@ -1,17 +1,22 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import TopNavBar from './components/TopNavBar';
 import BottomFooter from './components/BottomFooter';
-import LoginPage from './components/LoginPage';
-
-// import { Switch, Route, HashRouter } from "react-router-dom";
+import HomePage from './components/Home/HomePage';
+import LoginPage from './components/Login/LoginPage';
+import { BrowserRouter ,Route, Routes} from "react-router-dom";
 
 
 function App() {
   return (
   <div>
-    <TopNavBar/>
-    <BottomFooter/>
-    <LoginPage/>
+    <TopNavBar />
+    <BrowserRouter>
+    <Routes>
+    <Route exact path='/' element={<HomePage />}/>
+    <Route path='/Login' element={<LoginPage />}/>
+    </Routes>
+    </BrowserRouter>
+    <BottomFooter />
   </div>
   );
 }

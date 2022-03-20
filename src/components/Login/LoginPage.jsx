@@ -1,13 +1,15 @@
 import React from "react";
-import '../css/LoginPage.css'
-function LoginPage(){
+import './LoginPage.css';
+const LoginPage=()=>{
     function handleSubmit(e) {
         e.preventDefault();
-        alert('You clicked button.');
+        alert('You are in the system.');
     }
     return(
+    <div>
+    <h1>Login Page</h1>
     <form className="loginPage" onSubmit={handleSubmit}>
-    <h1>FCN-Site</h1>   
+    <h1>CFN-Site</h1>   
     <div>
         <label>Username:</label>
         <input type = "text" />
@@ -19,7 +21,8 @@ function LoginPage(){
     <div>
         <button >Log In</button>
     </div>
-    </form>    
+    </form>
+    </div>    
     );
 }
 export default LoginPage;
