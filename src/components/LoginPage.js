@@ -3,10 +3,10 @@ import '../css/LoginPage.css'
 function LoginPage(){
     function handleSubmit(e) {
         e.preventDefault();
-        alert('You clicked submit.');
-    }    
+        alert('You clicked button.');
+    }
     return(
-    <footer className="loginPage">
+    <form className="loginPage" onSubmit={handleSubmit}>
     <h1>FCN-Site</h1>   
     <div>
         <label>Username:</label>
@@ -17,10 +17,9 @@ function LoginPage(){
         <input type = "password" />
     </div>
     <div>
-        <button type="submit" onSubmit={alert("test")}>Log In</button>
+        <button >Log In</button>
     </div>
-    
-    </footer>
+    </form>    
     );
 }
 export default LoginPage;
