@@ -21,10 +21,10 @@ jobs:
     steps:
       - checkout
       - node/with-cache:
-        steps:
-          - run: npm install
-          - run: npm test
-          - run: npm lint
+          steps:
+            - run: npm install
+            - run: npm test
+            - run: npm lint
 
       - heroku/deploy-via-git:
           force: true # this parameter instructs the push to use a force flag when pushing to the heroku remote, see: https://devcenter.heroku.com/articles/git
