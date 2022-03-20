@@ -1,5 +1,5 @@
 import '../css/BottomFooter.css';
-function BottomFooter(){
+const BottomFooter=()=>{
     return(
     <footer className="bfooter">
     <p>
