@@ -17,7 +17,7 @@
     "plugins": [
         "react"
     ],
-    "rules":{
+    "rules": {
         "require-jsdoc": ["error", {
             "require": {
                 "FunctionDeclaration": false,
@@ -26,6 +26,7 @@
                 "ArrowFunctionExpression": false,
                 "FunctionExpression": false
             }
-        }]
+        }],
+        "linebreak-style": ["off", "unix"]
     }
 }
