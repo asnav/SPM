@@ -13,17 +13,6 @@ orbs:
   # See here https://circleci.com/docs/2.0/env-vars/#setting-an-environment-variable-in-a-project
   heroku: circleci/heroku@1.2
 
-
-jobs:
-  main-job:
-    executor:
-      name: node/default
-    steps:
-      - checkout
-      - run: npm install
-      - run: npm test
-      - run: npm lint
-
 workflows:
   # Below is the definition of your workflow.
   # Inside the workflow, you provide the jobs you want to run, e.g this workflow runs the build-and-test job above.
