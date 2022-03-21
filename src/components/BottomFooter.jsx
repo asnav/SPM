@@ -1,12 +1,14 @@
 import '../css/BottomFooter.css';
+import React from 'react';
+
 const BottomFooter=()=>{
-    return(
+  return (
     <footer className="bfooter">
-    <p>
-    Develop by: Idan Fadlon, Amit Cohen, Asaf Navon <br></br>
-    All rights reserved
-    </p>
+      <p>
+        Develop by: Idan Fadlon, Amit Cohen, Asaf Navon <br></br>
+        All rights reserved
+      </p>
     </footer>
-    );
-}
+  );
+};
 export default BottomFooter;
