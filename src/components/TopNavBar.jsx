@@ -6,7 +6,7 @@ const TopNavBar=()=>{
   return (
     <Navbar collapseOnSelect className='my-navbar' expand="lg" variant="dark">
       <Navbar.Brand className="logo me-auto p-2" href="/">
-        CFN-Brand
+      Mento
       </Navbar.Brand>
       <Nav>
         <Nav.Link className="my-nav-link p-3" href="/Login">

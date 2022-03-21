@@ -1,16 +1,17 @@
 import React from 'react';
-
+import {useNavigate} from 'react-router-dom';
 import './LoginPage.css';
+
 const LoginPage=()=>{
-  function handleSubmit(e) {
-    e.preventDefault();
-    alert('You are in the system.');
-  }
+  const navigate = useNavigate();
+  const LoginButton = () => {
+    navigate('/About');
+  };
   return (
     <div>
       <h1>Login Page</h1>
-      <form className='loginPage' onSubmit={handleSubmit}>
-        <h1>CFN-Site</h1>
+      <form className='loginPage'>
+        <h1>Mento</h1>
         <div>
           <label>Username:</label>
           <input type = "text" />
@@ -20,7 +21,8 @@ const LoginPage=()=>{
           <input type = "password" />
         </div>
         <div>
-          <button >Log In</button>
+          <button onClick={LoginButton}
+          >Log In</button>
         </div>
       </form>
     </div>
