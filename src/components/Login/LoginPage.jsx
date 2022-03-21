@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 import './LoginPage.css';
 const LoginPage=()=>{
@@ -6,24 +6,24 @@ const LoginPage=()=>{
     e.preventDefault();
     alert('You are in the system.');
   }
-  return(
+  return (
     <div>
       <h1>Login Page</h1>
-      <form className="loginPage" onSubmit={handleSubmit}>
-        <h1>CFN-Site</h1>   
+      <form className='loginPage' onSubmit={handleSubmit}>
+        <h1>CFN-Site</h1>
         <div>
-            <label>Username:</label>
-            <input type = "text" />
+          <label>Username:</label>
+          <input type = "text" />
         </div>
         <div>
-            <label>Password:</label>
-            <input type = "password" />
+          <label>Password:</label>
+          <input type = "password" />
         </div>
         <div>
-            <button >Log In</button>
+          <button >Log In</button>
         </div>
       </form>
-    </div>    
+    </div>
   );
-}
+};
 export default LoginPage;

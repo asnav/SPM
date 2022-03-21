@@ -6,10 +6,6 @@ import LoginPage from './components/Login/LoginPage';
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import React from 'react';
 
-/**
- * constructs the base of the app
- * @return {JSX.Element}
- */
 function App() {
   return (
     <div>
