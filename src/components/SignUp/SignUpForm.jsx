@@ -1,18 +1,23 @@
 import React, {useState} from 'react';
 import './SignUpForm.css';
+import validation from './validation';
 
 const SignUpForm = () => {
-  const [values, setValues] =useState({
+  const [values, setValues] = useState({
     fullname: '',
     email: '',
     password: '',
     password2: '',
   });
-  const handleChange = (e) =>{
+  const handleChange = (e) => {
     setValues({
       ...values,
       [e.target.name]: e.target.value,
     });
+  };
+  const handleSubmit = () => {
+    e.preventDefault();
+    setErrors(validation(values));
   };
   return (
     <div className="container">
@@ -58,7 +63,7 @@ const SignUpForm = () => {
             />
           </div>
           <div>
-            <button onClick={SignUpButton}>SignUp</button>
+            <button onClick={handleSubmit}>SignUp</button>
           </div>
         </div>
       </form>

@@ -9,8 +9,8 @@ const TopNavBar=()=>{
       Mento
       </Navbar.Brand>
       <Nav>
-        <Nav.Link className="my-nav-link p-3" href="/Login">
-          Login
+        <Nav.Link className="my-nav-link p-3" href="/SignUp">
+          Login/SignUp
         </Nav.Link>
       </Nav>
     </Navbar>
