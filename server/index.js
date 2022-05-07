@@ -1,4 +1,4 @@
-const express = require("express");
+const express = require('express');
 const mongoose = require('mongoose');
 
 const app = express();
@@ -21,8 +21,8 @@ mongoose.connect(dbUrl, connectionParams).then(() => {
 }).catch((err) => console.log(err));
 const Cat = mongoose.model('Cat', {name: String});
 
-app.get("/", (req, res) => {
-  res.send("<h1>Hello World!</h1>");
+app.get('/', (req, res) => {
+  res.send('<h1>Hello World!</h1>');
 });
 
 app.listen(port, () => {
