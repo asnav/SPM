@@ -1,35 +1,24 @@
-const express = require('express');
-const mongoose = require('mongoose');
-
+import userRouter from './routes/user.js';
+// const cores = require('cores');
+import express from 'express';
+import mongoose from 'mongoose';
+ import dotenv from 'dotenv';
+ dotenv.config();
 const app = express();
 app.use(express.json());
-app.use(express.urlencoded());
 const port = 5000;
 
-dbUrl = 'mongodb+srv://mento:mento2022@cluster0.iy0kq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+const uri = process.env.ATLAS_URI;
+mongoose.connect(uri,{useNewUrlParser: true,
+  useUnifiedTopology: true});
 
-const connectionParams = {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-};
-
-mongoose.connect(dbUrl, connectionParams).then(() => {
-  console.log('MongoDB Connected');
-  const kitty = new Cat({name: 'dani'});
-  kitty.save().then(() => console.log('meow'));
-  console.log('Hii');
-}).catch((err) => console.log(err));
-const Cat = mongoose.model('Cat', {name: String});
-
-app.get('/', (req, res) => {
-  res.send('<h1>Hello World!</h1>');
-});
-
-app.post('/api/users/signup',(req, res) =>{
-  console.log('IDANNNNNNNNNNNNNNNNN');
-});
+const connection = mongoose.connection;
+connection.once( 'open', ()=>{
+  console.log("MongoDB database connection established successfully");
+})
 
 
+app.use('/user',userRouter);
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
