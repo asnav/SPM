@@ -5,28 +5,33 @@ import './SignUpForm.css';
 
 const SignUpForm = () => {
   const navigate = useNavigate();
-  const [values, setValues] = useState({
-    fullname: '',
-    email: '',
-    password: '',
-  });
-  const handleChange = (e) => {
-    setValues({
-      ...values,
-      [e.target.name]: e.target.value,
-    });
-  };
+  // const [values, setValues] = useState({
+  //   fullname: '',
+  //   email: '',
+  //   password: '',
+  // });
+  // const handleChange = (e) => {
+  //   setValues({
+  //     ...values,
+  //     [e.target.name]: e.target.value,
+  //   });
+  //   window.alert(values.fullname);
+  // };
+  const [fullname, setFullname] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const handleSubmit = () => {
-    e.preventDefault();
+    // e.preventDefault();
     try {
-      axios.post('/api/users/signup', {
+      axios.post('/user/SignUp', {
         fullname,
         email,
         password,
       });
-      navigate.push('/');
+      navigate('/');
     } catch (err) {
       window.alert(err);
+      navigate('/');
     }
   };
   return (
@@ -39,9 +44,8 @@ const SignUpForm = () => {
             className="input"
             type="text"
             name="fullname"
-            value={values.fullname}
-            onChange={handleChange}
-          />
+            value={fullname}
+            onChange={(e) => setFullname(e.target.value)}/>
         </div>
         <div className="email">
           <label className="label">Email</label>
@@ -49,18 +53,16 @@ const SignUpForm = () => {
             className="input"
             type="email"
             name="email"
-            value={values.email}
-            onChange={handleChange}
-          />
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}/>
           <div className="password">
             <label className="label">Password</label>
             <input
               className="input"
               type="password"
               name="password"
-              value={values.password}
-              onChange={handleChange}
-            />
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}/>
           </div>
 
           <div>
