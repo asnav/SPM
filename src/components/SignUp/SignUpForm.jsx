@@ -1,13 +1,14 @@
 import React, {useState} from 'react';
+import {useNavigate} from 'react-router-dom';
+import axios from 'axios';
 import './SignUpForm.css';
-import validation from './validation';
 
 const SignUpForm = () => {
+  const navigate = useNavigate();
   const [values, setValues] = useState({
     fullname: '',
     email: '',
     password: '',
-    password2: '',
   });
   const handleChange = (e) => {
     setValues({
@@ -17,7 +18,16 @@ const SignUpForm = () => {
   };
   const handleSubmit = () => {
     e.preventDefault();
-    setErrors(validation(values));
+    try {
+      axios.post('/api/users/signup', {
+        fullname,
+        email,
+        password,
+      });
+      navigate.push('/');
+    } catch (err) {
+      window.alert(err);
+    }
   };
   return (
     <div className="container">
@@ -52,16 +62,7 @@ const SignUpForm = () => {
               onChange={handleChange}
             />
           </div>
-          <div className="password">
-            <label className="label">Confirm Password</label>
-            <input
-              className="input"
-              type="password"
-              name="password2"
-              value={values.password2}
-              onChange={handleChange}
-            />
-          </div>
+
           <div>
             <button onClick={handleSubmit}>SignUp</button>
           </div>

@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded());
-const port = 3001;
+const port = 5000;
 
 dbUrl = 'mongodb+srv://mento:mento2022@cluster0.iy0kq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 
@@ -24,6 +24,11 @@ const Cat = mongoose.model('Cat', {name: String});
 app.get('/', (req, res) => {
   res.send('<h1>Hello World!</h1>');
 });
+
+app.post('/api/users/signup',(req, res) =>{
+  console.log('IDANNNNNNNNNNNNNNNNN');
+});
+
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
