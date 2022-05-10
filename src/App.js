@@ -9,6 +9,7 @@ import SignUpForm from './components/SignUp/SignUpForm';
 import AboutPage from './components/About/AboutPage';
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 
+
 function App() {
   return (
     <div>
