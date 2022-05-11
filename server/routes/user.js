@@ -15,6 +15,7 @@ userRouter.post(
           email: req.body.email,
           password: req.body.password,
         });
+        // eslint-disable-next-line no-unused-vars
         const user = await newUser.save();
         console.log('work');
         // res.send({

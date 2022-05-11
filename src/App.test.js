@@ -5,6 +5,6 @@ import React from 'react';
 
 test('renders login link', () => {
   render(<App />);
-  const linkElement = screen.getByText('mento');
+  const linkElement = screen.getByText('mento.');
   expect(linkElement).toBeInTheDocument();
 });
