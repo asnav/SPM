@@ -1,5 +1,5 @@
 import React from 'react';
-import './barber.png';
+import '../barber.png';
 import './barbercard.css';
 
 export default function BarberCard() {
@@ -17,7 +17,7 @@ export default function BarberCard() {
   ];
 
   const imageName =
-  require('./barber.png');
+  require('../barber.png');
 
   function handleRemove(id) {}
 
