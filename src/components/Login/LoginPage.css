@@ -27,3 +27,9 @@ button{
     color: #206F91;
     font-weight: 750;
 }
+text{
+    color: blue;
+    font-weight: bolder;
+    text-align: left;
+    font-style: italic;
+}

@@ -3,18 +3,18 @@
     margin: 0;
 }
 .container{
-    background: linear-gradient(45deg,#fff060,#e7a300);
+    background: linear-gradient(45deg,#a4d2e4,#206F91);
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .title{
-    color: #e7a300;
-    text-align: center;
+    color: #000000;
+    text-align: left;
     margin: 80px 0px 40px 0px;
 }
-.name,.email,.password,.password2{
+.name,.email,.password{
     margin: 20px;
     color:#706f6f;
     font-size: 12px;

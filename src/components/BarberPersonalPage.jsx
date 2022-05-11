@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import './images/barber.png';
+import 'src\images\barber.png';
 import AppointmentsTypes from './components/AppointmentsTypes';
 
 
@@ -15,7 +15,7 @@ export default function BarberPersonalPage(props) {
   const [phoneState, setPhoneState] = useState(false);
   const [mailState, setMailState] = useState(false);
   const [HouersState, setHouersState] = useState(false);
-  const imageName = require('./barber.png');
+  const imageName = require('src\images\barber.png');
 
   /* Check if string is email */
   function checkIfEmail(str) {
