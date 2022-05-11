@@ -1,31 +1,45 @@
+import {TextField, Button} from '@mui/material';
 import React from 'react';
 import {useNavigate} from 'react-router-dom';
 import './LoginPage.css';
 
-const LoginPage=()=>{
+
+function LoginPage() {
+  const [username, setUsername] = useState('usrname');
+  // const [password, setPassword] = useState('pass');
+  // setUsername(username);
+  // setPassword(password);
   const navigate = useNavigate();
-  const LoginButton = () => {
-    navigate('/About');
-  };
   return (
-    <div>
-      <h1>Login Page</h1>
-      <form className='loginPage'>
-        <h1>Mento</h1>
-        <div>
-          <label>Username:</label>
-          <input type = "text" />
-        </div>
-        <div>
-          <label>Password:</label>
-          <input type = "password" />
-        </div>
-        <div>
-          <button onClick={LoginButton}
-          >Log In</button>
-        </div>
-      </form>
-    </div>
+    <form
+      onSubmit={() => {
+        navigate('/About');
+      }}
+      className='loginPage'
+    >
+      <h1>Login</h1>
+      <TextField
+        id="outlined-basic"
+        label="Username"
+        variant="outlined"
+        value={username}
+        onChange={(event) => setUsername(event.target.value)}
+      />
+      <br />
+      <TextField
+        id="filled-password-input"
+        label="Password"
+        type="password"
+        autoComplete="current-password"
+        variant="filled"
+        // value={password}
+        // onChange={(event) => setPassword(event.target.value)}
+      />
+      <br />
+      <Button type='submit' variant="contained">Login</Button>
+      <hr />
+      <a href='/SignUp' >{'Don\'t have an account yet?'}</a>
+    </form>
   );
 };
 export default LoginPage;

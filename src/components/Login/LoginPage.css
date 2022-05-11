@@ -1,16 +1,14 @@
-.loginPage{
-    background-color: #206F91;
-    width: auto;
-    height: auto;
-    position:relative;
-    margin-top: 30px;
-}
+form.loginPage{
+    background-color: #66bb9c;
+    position: relative;
+    width: 430px;
+    margin: 30px auto 20px auto;
+    background: #fff;
+    padding: 15px;
+    border-radius: 7px;
+    box-shadow: 0 1px 5px rgb(138, 137, 137);
+  }
 
-h1{
-    color: #86C7E2;
-    font-weight: bold;
-    text-align: center;
-}
 div{
     text-align: center;
     padding: 10px;
