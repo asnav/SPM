@@ -1,0 +1,45 @@
+button {
+    width: 80px;
+    height: 30px;
+  }
+  
+  input {
+    width: 120px;
+    height: 20px;
+  }
+  
+  .appointmemtbox {
+    background: blanchedalmond;
+    border: 1px solid #e5e5e5;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin-bottom: 8px;
+    padding: 2px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    margin-right: 50px;
+  }
+  
+  .addbox {
+    background: #7f265b;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin-bottom: 8px;
+    padding: 2px;
+    padding-left: 10px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    margin-right: 30px;
+  }
+  
+  .flexbox {
+    width: 120px;
+    margin: 10px;
+    text-align: center;
+    font-size: 14px;
+  }
+  
