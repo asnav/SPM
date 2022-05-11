@@ -6,7 +6,7 @@ import BottomFooter from './components/BottomFooter';
 import HomePage from './components/Home/HomePage';
 import LoginPage from './components/Login/LoginPage';
 import SignUpForm from './components/SignUp/SignUpForm';
-// import BarberPersonalPage from './components/BarberPersonalPage';
+import BarberPersonalPage from './components/BarberPersonalPage';
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 
 
@@ -19,6 +19,7 @@ function App() {
           <Route exact path='/' element={<HomePage />}/>
           <Route path='/Login' element={<LoginPage/>}/>
           <Route path='/SignUp' element={<SignUpForm/>}/>
+          <Route path='/BarberProfile' element={<BarberPersonalPage/>}/>
         </Routes>
       </BrowserRouter>
       <BottomFooter />

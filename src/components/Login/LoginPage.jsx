@@ -6,13 +6,13 @@ const LoginPage=()=>{
   const navigate = useNavigate();
   const emailRef = useRef();
   const passwordRef = useRef();
-  function handleLogIn(e) {
+  function handleLogIn() {
     const mail = emailRef.current.value;
-    if (mail === '') return;
-    mail.current.value = null;
+    if (mail == ' ') return;
     const password = passwordRef.current.value;
-    if (password === null) return;
-    password.current.value = null;
+    if (password == ' ') return;
+
+    navigate('/BarberProfile');
   }
   const signUpButton = () => {
     navigate('/SignUp');
@@ -23,7 +23,7 @@ const LoginPage=()=>{
       <form className='loginPage'>
         <h1>Mento</h1>
         <div>
-          <label>Username:</label>
+          <label>Email:</label>
           <input ref={emailRef} type = "text" />
         </div>
         <div>

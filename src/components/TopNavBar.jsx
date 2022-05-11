@@ -15,6 +15,9 @@ const TopNavBar = () => {
         <Nav.Link className="my-nav-link p-3" href="/SignUp">
           SignUp
         </Nav.Link>
+        <Nav.Link className="my-nav-link p-3" href="/BarberProfile">
+          Barber Personal Page
+        </Nav.Link>
       </Nav>
     </Navbar>
   );
