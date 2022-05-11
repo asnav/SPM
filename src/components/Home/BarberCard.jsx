@@ -1,6 +1,6 @@
 import React from 'react';
-import '/Users/omer/Desktop/dd/mento/src/images/barber.png';
-import '/Users/omer/Desktop/dd/mento/src/css/barbercard.css';
+import './barber.png';
+import './barbercard.css';
 
 export default function BarberCard() {
   const list = [
@@ -17,7 +17,7 @@ export default function BarberCard() {
   ];
 
   const imageName =
-  require('/Users/omer/Desktop/dd/mento/src/images/barber.png');
+  require('./barber.png');
 
   function handleRemove(id) {}
 

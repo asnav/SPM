@@ -1,5 +1,5 @@
 import React from 'react';
-import BarberCard from '/Users/omer/Desktop/dd/mento/src/components/BarberCard';
+import BarberCard from './BarberCard';
 
 const HomePage =()=>{
   return (
