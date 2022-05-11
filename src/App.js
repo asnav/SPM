@@ -2,7 +2,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import TopNavBar from './components/TopNavBar';
-import BottomFooter from './components/BottomFooter';
 import HomePage from './components/Home/HomePage';
 import LoginPage from './components/Login/LoginPage';
 import SignUpForm from './components/SignUp/SignUpForm';
@@ -21,7 +20,6 @@ function App() {
           <Route path='/SignUp' element={<SignUpForm/>}/>
         </Routes>
       </BrowserRouter>
-      <BottomFooter />
     </div>
   );
 }
