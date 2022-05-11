@@ -1,10 +1,9 @@
-* {
-  text-align: center;
-}
 html {
   font-family: 'Lato', sans-serif;
-  font-weight: 400;  scroll-behavior: auto;
+  font-weight: 400; 
+  scroll-behavior: auto;
 }
+
 body {
   background-color: rgb(238, 238, 238);
   padding: 0 0px;
@@ -19,9 +18,14 @@ div.main {
   height: 900px;
 }
 
+text{
+  font-family: 'Lato', sans-serif;
+  font-weight: bold; 
+}
+
 h1 {
   color: rgb(33, 111, 135);
-  font-weight:lighter;
+
   text-align: center;
   padding: 10px;
 }
@@ -69,11 +73,13 @@ form button{
 }
 
 footer {
-  position:fixed;
+  position: fixed;
   text-align: center;
   bottom: 0;
+  margin: -20px -20px 0px -20px;
   width: 100%;
   height: 97px;
+  background-color: white;
 }
 
 footer p {
@@ -97,12 +103,15 @@ form.loginPage{
   margin-top: 150px;
 }
 
-form.loginage .loginInput {
+form.loginPage .loginInput {
   background-color: transparent;
+  margin: 0px 80px 0px 80px;
   text-align: left;
+  margin-bottom: 15px;
+  width: 60%;
 }
 
 form.loginPage Button{
   background-color: #5eafca;
-  margin-top: 10px;
+  margin: 0px 160px 0px 160px;
 }  
