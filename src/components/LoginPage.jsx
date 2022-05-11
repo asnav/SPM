@@ -1,11 +1,10 @@
 import {TextField, Button} from '@mui/material';
 import React from 'react';
 import {useNavigate} from 'react-router-dom';
-import './LoginPage.css';
 
 
 function LoginPage() {
-  const [username, setUsername] = useState('usrname');
+  // const [username, setUsername] = useState('usrname');
   // const [password, setPassword] = useState('pass');
   // setUsername(username);
   // setPassword(password);
@@ -19,14 +18,17 @@ function LoginPage() {
     >
       <h1>Login</h1>
       <TextField
-        id="outlined-basic"
+        className='loginInput'
+        id="filled-basic"
         label="Username"
-        variant="outlined"
-        value={username}
-        onChange={(event) => setUsername(event.target.value)}
+        variant="filled"
+        margin='normal'
+        // value={username}
+        // onChange={(event) => setUsername(event.target.value)}
       />
       <br />
       <TextField
+        className='loginInput'
         id="filled-password-input"
         label="Password"
         type="password"

@@ -1,24 +1,33 @@
 * {
-  padding: 10px;
-  margin: 0;
-  box-sizing: border-box;
   text-align: center;
-  align-items: center;
 }
 html {
-  font-family: "Roboto Slab", serif;
-  scroll-behavior: auto;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;  scroll-behavior: auto;
 }
 body {
-  background: #eee;
+  background-color: rgb(238, 238, 238);
   padding: 0 0px;
+  height: 100%;
+  align-content: center;
+}
+
+div.main {
+  background-color: #064359;
+  margin: 20px;
+  padding: 0.5%;
+  height: 900px;
 }
 
 h1 {
-  color: rgb(33, 111, 135);
+  color: rgb(228, 236, 238);
   font-weight:lighter;
   text-align: center;
   padding: 10px;
+}
+
+.root {
+  background: #064359;
 }
 
 .logo{
@@ -60,7 +69,7 @@ form button{
 }
 
 footer {
-  position: absolute;
+  position:fixed;
   text-align: center;
   bottom: 0;
   width: 100%;
@@ -76,3 +85,24 @@ footer hr {
   height: 0px;
   color: #fff;
 }
+
+form.loginPage{
+  position: relative;
+  width: 430px;
+  margin: 30px auto 20px auto;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 7px;
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
+  margin-top: 150px;
+}
+
+form.loginage .loginInput {
+  background-color: transparent;
+  text-align: left;
+}
+
+form.loginPage Button{
+  background-color: #5eafca;
+  margin-top: 10px;
+}  
