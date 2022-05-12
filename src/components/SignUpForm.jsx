@@ -1,8 +1,8 @@
-import React, {useState} from 'react';
-import {useNavigate} from 'react-router-dom';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
-const SignUpForm = () => {
+function SignUpForm() {
   const navigate = useNavigate();
   // const [values, setValues] = useState({
   //   fullname: '',
@@ -29,6 +29,7 @@ const SignUpForm = () => {
       });
       navigate('/');
     } catch (err) {
+      // eslint-disable-next-line no-alert
       window.alert(err);
       navigate('/');
     }
@@ -36,40 +37,43 @@ const SignUpForm = () => {
   return (
     <div className="container">
       <h2 className="title">Create Account</h2>
-      <form className="sign-up">
-        <div className="name">
-          <label className="label">Full name</label>
+      <form onSubmit={handleSubmit} className="sign-up">
+        <label htmlFor="name" className="name">
+          Full name:
           <input
             className="input"
             type="text"
             name="fullname"
             value={fullname}
-            onChange={(e) => setFullname(e.target.value)}/>
-        </div>
-        <div className="email">
-          <label className="label">Email</label>
+            onChange={(e) => setFullname(e.target.value)}
+          />
+        </label>
+
+        <label htmlFor="email" className="email">
+          Email
           <input
             className="input"
             type="email"
             name="email"
             value={email}
-            onChange={(e) => setEmail(e.target.value)}/>
-          <div className="password">
-            <label className="label">Password</label>
-            <input
-              className="input"
-              type="password"
-              name="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}/>
-          </div>
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </label>
 
-          <div>
-            <button onClick={handleSubmit}>SignUp</button>
-          </div>
-        </div>
+        <label htmlFor="password" className="password">
+          Password
+          <input
+            className="input"
+            type="password"
+            name="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+        </label>
+
+        <button type="submit">SignUp</button>
       </form>
     </div>
   );
-};
+}
 export default SignUpForm;

@@ -15,7 +15,7 @@ const validation = (values) => {
   }
   if (!values.password2) {
     errors.password2 = 'Confrim password is required';
-  } else if (password !== password2) {
+  } else if (values.password !== values.password2) {
     errors.password2 = 'Passwords are not mutched';
   }
   return errors;

@@ -5,7 +5,7 @@
     },
     "extends": [
         "plugin:react/recommended",
-        "google"
+        "airbnb"
     ],
     "parserOptions": {
         "ecmaFeatures": {
@@ -27,6 +27,6 @@
                 "FunctionExpression": false
             }
         }],
-        "linebreak-style": ["off", "unix"]
-    }
+        "linebreak-style": ["off", "unix"],
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]    }
 }

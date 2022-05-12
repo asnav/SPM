@@ -1,4 +1,5 @@
 import React from 'react';
+
 export default function ClientAppointments() {
   const initialList = [
     {
@@ -15,18 +16,18 @@ export default function ClientAppointments() {
     },
   ];
 
-  function handleRemove(id) {}
+  function handleRemove() {}
 
   return (
-    <div className='main'>
+    <div className="main">
       <ul>
         {initialList.map((item) => (
-          <div className='clientAppointment' key={item.id}>
-            <div className='clientAppointmentcontainer'>
+          <div className="clientAppointment" key={item.id}>
+            <div className="clientAppointmentcontainer">
               <h4>{item.barbername}</h4>
               <p>{item.date}</p>
               <p>{item.time}</p>
-              <button type='button' onClick={() => handleRemove(item.id)}>
+              <button type="button" onClick={() => handleRemove(item.id)}>
                 Cancel
               </button>
             </div>

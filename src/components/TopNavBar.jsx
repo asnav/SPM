@@ -1,11 +1,11 @@
 import React from 'react';
-import {Navbar, Nav} from 'react-bootstrap';
+import { Navbar, Nav } from 'react-bootstrap';
 
-const TopNavBar=()=>{
+function TopNavBar() {
   return (
-    <Navbar collapseOnSelect className='my-navbar' expand="lg" variant="dark">
+    <Navbar collapseOnSelect className="my-navbar" expand="lg" variant="dark">
       <Navbar.Brand className="logo" href="/">
-      mento.
+        mento.
       </Navbar.Brand>
       <Nav>
         <Nav.Link className="login-link" href="/Login">
@@ -14,6 +14,6 @@ const TopNavBar=()=>{
       </Nav>
     </Navbar>
   );
-};
+}
 
 export default TopNavBar;
