@@ -1,19 +1,17 @@
 import { TextField, Button } from '@mui/material';
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 function LoginPage() {
-  // const [username, setUsername] = useState('usrname');
-  // const [password, setPassword] = useState('pass');
-  // setUsername(username);
-  // setPassword(password);
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
   const navigate = useNavigate();
   return (
     <form
       onSubmit={() => {
         navigate('/About');
       }}
-      className="loginPage"
+      className="login-signup"
     >
       <h1>Login</h1>
       <TextField
@@ -22,8 +20,8 @@ function LoginPage() {
         label="Username"
         variant="filled"
         margin="normal"
-        // value={username}
-        // onChange={(event) => setUsername(event.target.value)}
+        value={username}
+        onChange={(event) => setUsername(event.target.value)}
       />
       <br />
       <TextField
@@ -33,8 +31,8 @@ function LoginPage() {
         type="password"
         autoComplete="current-password"
         variant="filled"
-        // value={password}
-        // onChange={(event) => setPassword(event.target.value)}
+        value={password}
+        onChange={(event) => setPassword(event.target.value)}
       />
       <br />
       <Button type="submit" variant="contained">Login</Button>

@@ -1,3 +1,5 @@
+/* eslint-disable import/no-unresolved */
+/* eslint-disable import/no-extraneous-dependencies */
 // const cores = require('cores');
 import express from 'express';
 import mongoose from 'mongoose';

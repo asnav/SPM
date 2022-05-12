@@ -8,7 +8,7 @@ function TopNavBar() {
         mento.
       </Navbar.Brand>
       <Nav>
-        <Nav.Link className="login-link" href="/Login">
+        <Nav.Link className="navbar-item" href="/Login">
           Login
         </Nav.Link>
       </Nav>
