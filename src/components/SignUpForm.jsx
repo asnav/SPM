@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { TextField, Button } from '@mui/material';
 
 function SignUpForm() {
   const navigate = useNavigate();
@@ -35,45 +36,45 @@ function SignUpForm() {
     }
   };
   return (
-    <div className="container">
-      <h2 className="title">Create Account</h2>
-      <form onSubmit={handleSubmit} className="sign-up">
-        <label htmlFor="name" className="name">
-          Full name:
-          <input
-            className="input"
-            type="text"
-            name="fullname"
-            value={fullname}
-            onChange={(e) => setFullname(e.target.value)}
-          />
-        </label>
-
-        <label htmlFor="email" className="email">
-          Email
-          <input
-            className="input"
-            type="email"
-            name="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </label>
-
-        <label htmlFor="password" className="password">
-          Password
-          <input
-            className="input"
-            type="password"
-            name="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </label>
-
-        <button type="submit">SignUp</button>
-      </form>
-    </div>
+    <form
+      onSubmit={handleSubmit}
+      className="login-signup"
+    >
+      <h1>Create Account</h1>
+      <TextField
+        className="login-signup-input"
+        id="filled-basic"
+        label="Full Name"
+        variant="filled"
+        margin="normal"
+        value={fullname}
+        onChange={(event) => setFullname(event.target.value)}
+      />
+      <br />
+      <TextField
+        className="login-signup-input"
+        id="filled-basic"
+        label="Email"
+        type="email"
+        variant="filled"
+        margin="normal"
+        value={email}
+        onChange={(event) => setEmail(event.target.value)}
+      />
+      <br />
+      <TextField
+        className="login-signup-input"
+        id="filled-password-input"
+        label="Password"
+        type="password"
+        autoComplete="current-password"
+        variant="filled"
+        value={password}
+        onChange={(event) => setPassword(event.target.value)}
+      />
+      <br />
+      <Button type="submit" variant="contained">Sign Up</Button>
+    </form>
   );
 }
 export default SignUpForm;

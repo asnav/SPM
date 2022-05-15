@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 function LoginPage() {
-  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
   return (
@@ -14,18 +14,20 @@ function LoginPage() {
       className="login-signup"
     >
       <h1>Login</h1>
+      <hr />
       <TextField
-        className="loginInput"
+        className="login-signup-input"
         id="filled-basic"
-        label="Username"
+        label="Email"
+        type="email"
         variant="filled"
         margin="normal"
-        value={username}
-        onChange={(event) => setUsername(event.target.value)}
+        value={email}
+        onChange={(event) => setEmail(event.target.value)}
       />
       <br />
       <TextField
-        className="loginInput"
+        className="login-signup-input"
         id="filled-password-input"
         label="Password"
         type="password"
