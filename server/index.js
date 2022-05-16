@@ -2,7 +2,8 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
-import userRouter from './routes/user';
+// eslint-disable-next-line import/extensions
+import userRouter from './routes/user.js';
 
 dotenv.config();
 const app = express();
