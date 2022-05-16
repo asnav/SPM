@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import express from 'express';
 import expressAsyncHandler from 'express-async-handler';
 import User from '../models/user.js';

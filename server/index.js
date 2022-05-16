@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 // const cores = require('cores');
 import express from 'express';
 import mongoose from 'mongoose';

@@ -29,6 +29,6 @@
         }],
         "linebreak-style": ["off", "unix"],
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-        "import/extensions": ["warning"]
+        "import/extensions": ["off"]
     }
 }
