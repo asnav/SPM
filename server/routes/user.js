@@ -1,6 +1,6 @@
 import express from 'express';
 import expressAsyncHandler from 'express-async-handler';
-import User from '../models/user';
+import User from '../models/user.js';
 // eslint-disable-next-line new-cap
 const userRouter = express.Router();
 userRouter.post(

@@ -6,5 +6,6 @@ const UserSchema = new mongoose.Schema({
   password: { type: String, required: true },
   isBarber: { type: Boolean, default: false, required: true },
 });
+
 const User = mongoose.model('User', UserSchema);
 export default User;
