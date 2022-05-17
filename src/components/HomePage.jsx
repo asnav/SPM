@@ -1,14 +1,14 @@
 import React from 'react';
-import { Box } from '@mui/material';
+import BarberCard from './BarberCard';
 
 function HomePage() {
   return (
-    <Box
-      className="homepage"
-      color="white"
-    >
-      <h1>Home Page</h1>
-    </Box>
+    <div className="barbers-box">
+      <div className="barbers-page">
+        <h1>Our Barbers</h1>
+        <BarberCard />
+      </div>
+    </div>
   );
 }
 export default HomePage;
