@@ -1,21 +1,15 @@
 html {
   font-family: 'Lato', sans-serif;
   font-weight: 400; 
-  scroll-behavior: auto;
 }
 
 body {
-  background-color: rgb(238, 238, 238);
-  padding: 0 0px;
-  height: 100%;
-  align-content: center;
   overflow: hidden;
 }
 
 div.main {
-  background-color: #064359;
-  margin: 0px;
-  padding: 0.5%;
+  background-color: #164761;
+  background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
   height: 100vh;
 }
 
@@ -48,9 +42,6 @@ h1 {
   color:white !important;
   position: relative;
 }
-.homepage h1{
-  color: white;
-}
 
 h4 {
   color: white;
@@ -67,19 +58,6 @@ div.form-box{
   width: fit-content;
   max-height: 65vh;
   margin: 15vh auto !important;
-  padding: 15px;
-  background-color: #fff;
-  border-radius: 7px;
-  box-shadow: 0px 0px 10px #ddd;
-  margin-top: 150px;
-}
-
-div.barbers-box{
-  position: relative;
-  overflow: scroll;
-  width: 97vw;
-  max-height: 80vh;
-  margin: 3vh auto !important;
   padding: 15px;
   background-color: #fff;
   border-radius: 7px;
@@ -113,26 +91,56 @@ form.login-signup Button{
   color: #bf0707;
 }
 
+div.homepage-box{
+  position: relative;
+  overflow: scroll;
+  width: 97vw;
+  height: 80vh;
+  margin: 3vh auto !important;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 7px;
+  box-shadow: 0px 0px 10px #ddd;
+  margin-top: 150px;
+}
+
+.barbers-box{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-evenly;
+  align-items: center;
+}
+
 .cardbox {
   padding: 10px;
-  table-layout: auto;
-  background-color: #286d87;
+  background-color: #0c3f5b;
   text-align: center;
-  align-items: center;
-  margin: 10px auto;
+  margin: 30px;
   width: 200px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   border-radius: 10px;
+  border: transparent;
 }
 
 .cardbox:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.8);
+  padding: 15px;
+  width: 210px;
+  margin: 25px;
 }
 
-.cardbox Button {
-  background-color: white;
-  
+.barber-page{
+  padding: 10px;
+  background-color: #0c3f5b;
+  text-align: center;
+  margin: 30px auto;
+  width: 90vw;
+  height: 70vh;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 10px;
+  border: transparent;
 }
 
 .containerbox {

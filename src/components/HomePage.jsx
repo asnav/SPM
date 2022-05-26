@@ -1,13 +1,10 @@
 import React from 'react';
-import BarberCard from './BarberCard';
+import BarbersBox from './BarbersBox';
 
 function HomePage() {
   return (
-    <div className="barbers-box">
-      <div className="barbers-page">
-        <h1>Our Barbers</h1>
-        <BarberCard />
-      </div>
+    <div className="homepage-box">
+      <BarbersBox />
     </div>
   );
 }
