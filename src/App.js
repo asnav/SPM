@@ -6,25 +6,24 @@ import BottomFooter from './components/BottomFooter';
 import HomePage from './components/HomePage';
 import LoginPage from './components/LoginPage';
 import SignUpPage from './components/SignUpForm';
-import AboutPage from './components/AboutPage';
 
 function App() {
-  const [isLoggedIn, setLoggedIn] = useState(false);
+  const [userType, setUserType] = useState(null);
+
   return (
     <div className="main">
-      <TopNavBar isLoggedIn={isLoggedIn} />
+      <TopNavBar userType={userType} />
       <BrowserRouter>
         <Routes>
-          <Route exact path="/" element={<HomePage />} />
+          <Route exact path="/" element={<HomePage userType={userType} />} />
           <Route
             path="/Login"
-            element={<LoginPage setLoggedIn={setLoggedIn} />}
+            element={<LoginPage setUserType={setUserType} />}
           />
           <Route
             path="/SignUp"
-            element={<SignUpPage setLoggedIn={setLoggedIn} />}
+            element={<SignUpPage setUserType={setUserType} />}
           />
-          <Route path="/About" element={<AboutPage />} />
         </Routes>
       </BrowserRouter>
       <BottomFooter />
