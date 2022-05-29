@@ -5,7 +5,7 @@ function BottomFooter() {
     <footer>
       <hr />
       <p>
-        Develop by: Idan Fadlon, Amit Cohen, Asaf Navon
+        Developed by: Idan Fadlon, Amit Cohen, Asaf Navon, Omer Alali
         {' '}
         <br />
         All rights reserved
