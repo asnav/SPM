@@ -11,19 +11,17 @@ function LoginPage(props) {
 
   function handleSubmit(event) {
     event.preventDefault();
-    try {
-      axios.post('/user/Login', {
-        email,
-        password,
+    axios.post('/user/Login', {
+      email,
+      password,
+    })
+      .then(() => {
+        props.setUserType('client');
+        navigate('/');
+      })
+      .catch(() => {
+        setPasswordIsWrong(true);
       });
-      navigate('/');
-    } catch (err) {
-      setPasswordIsWrong(true);
-      // eslint-disable-next-line no-alert
-      window.alert(err);
-      props.setUserType('client');
-      navigate('/');
-    }
   }
 
   return (
@@ -67,4 +65,5 @@ function LoginPage(props) {
     </div>
   );
 }
+
 export default LoginPage;

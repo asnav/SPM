@@ -1,4 +1,3 @@
-/* eslint-disable no-alert */
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
@@ -6,42 +5,33 @@ import { TextField, Button } from '@mui/material';
 
 function SignUpPage(props) {
   const navigate = useNavigate();
-  // const [values, setValues] = useState({
-  //   fullname: '',
-  //   email: '',
-  //   password: '',
-  // });
-  // const handleChange = (e) => {
-  //   setValues({
-  //     ...values,
-  //     [e.target.name]: e.target.value,
-  //   });
-  //   window.alert(values.fullname);
-  // };
   const [fullname, setFullname] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [repeatPassword, setRepeatPassword] = useState('');
-  const [isHidden, setIsHidden] = useState(true);
+  const [passwordsMismatch, setPasswordsMismatch] = useState(true);
+  const [emailIsTaken, setEmailIsTaken] = useState(true);
 
   function handleSubmit(event) {
     event.preventDefault();
+    setEmailIsTaken(true);
+    setPasswordsMismatch(true);
     if (password === repeatPassword) {
-      try {
-        axios.post('/user/SignUp', {
-          fullname,
-          email,
-          password,
+      axios.post('/user/SignUp', {
+        fullname,
+        email,
+        password,
+      })
+        .then(() => {
+          props.setUserType('client');
+          navigate('/');
+        })
+        .catch(() => {
+          // eslint-disable-next-line no-alert
+          setEmailIsTaken(false);
         });
-        navigate('/');
-      } catch (err) {
-        // eslint-disable-next-line no-alert
-        window.alert(err);
-        props.setUserType('client');
-        navigate('/');
-      }
     } else {
-      setIsHidden(false);
+      setPasswordsMismatch(false);
     }
   }
 
@@ -100,8 +90,10 @@ function SignUpPage(props) {
           required
         />
         <br />
-        <p1 className="error-message" hidden={isHidden}>Wrong username or password</p1>
-        <br hidden={isHidden} />
+        <p1 className="error-message" hidden={passwordsMismatch}>please verify your password</p1>
+        <br hidden={passwordsMismatch} />
+        <p1 className="error-message" hidden={emailIsTaken}>email is already used</p1>
+        <br hidden={emailIsTaken} />
         <Button type="submit" variant="contained">Sign Up</Button>
         <hr />
         <a href="/Login">Already have an account?</a>

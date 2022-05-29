@@ -8,13 +8,13 @@ function TopNavBar(props) {
         mento.
       </Navbar.Brand>
       <Nav>
-        {props.userType ? (
-          <Nav.Link className="navbar-item" href="/login" onClick={props.setUserType(null)}>
-            Logout
-          </Nav.Link>
-        ) : (
+        {props.userType === null ? (
           <Nav.Link className="navbar-item" href="/login">
             Login
+          </Nav.Link>
+        ) : (
+          <Nav.Link className="navbar-item" href="/login" onClick={props.setUserType(null)}>
+            Logout
           </Nav.Link>
         )}
         {props.userType === 'barber' && (
