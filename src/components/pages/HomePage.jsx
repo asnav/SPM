@@ -1,9 +1,9 @@
 import React from 'react';
-import BarbersBox from './BarbersBox';
+import BarbersBox from '../BarbersBox';
 
 function HomePage() {
   return (
-    <div className="homepage-box">
+    <div className="fullscreen-box">
       <BarbersBox />
     </div>
   );

@@ -2,7 +2,6 @@
 import React, { useState } from 'react';
 // import 'src\components\\barber.png';
 import AppointmentsTypes from './AppointmentsTypes';
-import './personalpage.css';
 
 export default function BarberPersonalPage() {
   const [name, setName] = useState('Omer');

@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { TextField, Button } from '@mui/material';
 
-function SignUpForm() {
+function SignUpPage(props) {
   const navigate = useNavigate();
   // const [values, setValues] = useState({
   //   fullname: '',
@@ -37,6 +37,7 @@ function SignUpForm() {
       } catch (err) {
         // eslint-disable-next-line no-alert
         window.alert(err);
+        props.setUserType('client');
         navigate('/');
       }
     } else {
@@ -108,4 +109,4 @@ function SignUpForm() {
   );
 }
 
-export default SignUpForm;
+export default SignUpPage;

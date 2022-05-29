@@ -2,7 +2,7 @@ import { TextField, Button } from '@mui/material';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-function LoginPage() {
+function LoginPage(props) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [passwordIsWrong, setPasswordIsWrong] = useState(false);
@@ -12,7 +12,8 @@ function LoginPage() {
       <form
         onSubmit={() => {
           if (!passwordIsWrong) {
-            navigate('/');
+            props.setUserType('barber');
+            navigate('/signup');
           } else {
             setPasswordIsWrong(true);
           }

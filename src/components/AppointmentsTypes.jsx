@@ -1,6 +1,5 @@
 /* eslint-disable no-alert */
 import React, { useState } from 'react';
-import './apptypes.css';
 
 export default function AppointmentsTypes() {
   const initialList = [
