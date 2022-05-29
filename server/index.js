@@ -1,9 +1,10 @@
-import userRouter from './routes/user.js';
-// const cores = require('cores');
 import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
+import userRouter from './routes/user.js';
 dotenv.config();
+
+
 const app = express();
 app.use(express.json());
 const port = 5000;
