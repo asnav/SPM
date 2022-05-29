@@ -24,7 +24,7 @@ function SignUpPage(props) {
   const [repeatPassword, setRepeatPassword] = useState('');
   const [isHidden, setIsHidden] = useState(true);
 
-  const handleSubmit = (event) => {
+  function handleSubmit(event) {
     event.preventDefault();
     if (password === repeatPassword) {
       try {
@@ -43,7 +43,8 @@ function SignUpPage(props) {
     } else {
       setIsHidden(false);
     }
-  };
+  }
+
   return (
     <div className="form-box">
       <form

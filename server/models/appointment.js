@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 const AppointmentSchema = new mongoose.Schema({
   clientemail: { type: String, required: true, unique: true },

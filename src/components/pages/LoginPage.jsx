@@ -1,4 +1,5 @@
 import { TextField, Button } from '@mui/material';
+import axios from 'axios';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -7,17 +8,28 @@ function LoginPage(props) {
   const [password, setPassword] = useState('');
   const [passwordIsWrong, setPasswordIsWrong] = useState(false);
   const navigate = useNavigate();
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    try {
+      axios.post('/user/Login', {
+        email,
+        password,
+      });
+      navigate('/');
+    } catch (err) {
+      setPasswordIsWrong(true);
+      // eslint-disable-next-line no-alert
+      window.alert(err);
+      props.setUserType('client');
+      navigate('/');
+    }
+  }
+
   return (
     <div className="form-box">
       <form
-        onSubmit={() => {
-          if (!passwordIsWrong) {
-            props.setUserType('barber');
-            navigate('/signup');
-          } else {
-            setPasswordIsWrong(true);
-          }
-        }}
+        onSubmit={handleSubmit}
         className="login-signup"
       >
         <h1>Login</h1>

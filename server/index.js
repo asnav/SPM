@@ -11,11 +11,11 @@ app.use(express.json());
 const port = 5000;
 
 const uri = process.env.ATLAS_URI;
-mongoose.connect(uri, {useNewUrlParser: true,
-  useUnifiedTopology: true});
+mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
+// eslint-disable-next-line prefer-destructuring
 const connection = mongoose.connection;
-connection.once( 'open', ()=>{
+connection.once('open', () => {
   console.log('MongoDB database connection established successfully');
 });
 
