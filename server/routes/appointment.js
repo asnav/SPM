@@ -30,7 +30,7 @@ appointmentRouter.post(
     }
   }),
 );
-<<<<<<< HEAD
+
 appointmentRouter.delete(
     '/',
     expressAsyncHandler(async (req, res) => {
@@ -44,6 +44,4 @@ appointmentRouter.delete(
     }),
   );
 export default appointmentRouter;
-=======
-export default appointmentRouter;
->>>>>>> 028162514df313019616fc9449025e5b8ef5ab74
+
