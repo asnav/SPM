@@ -10,7 +10,6 @@ const UserSchema = new mongoose.Schema({
     default: 'User',
     required: true,
   },
-  image:{type:String},
 });
 const User = mongoose.model('User', UserSchema);
 export default User;
