@@ -12,13 +12,14 @@ userRouter.post(
     if (checkUser) {
       res.status(401).json({ message: 'Email is already use' });
     } else {
+      res.status(200).json({message:'User is created succssfuly'});
       const newUser = new User({
         fullname: req.body.fullname,
         email: req.body.email.toLowerCase().trim(),
         password: req.body.password,
       });
       await newUser.save();
-      console.log('work');
+      //console.log('work');
     }
   }),
 );
@@ -26,7 +27,7 @@ userRouter.post(
 userRouter.post(
   '/Login',
   expressAsyncHandler(async (req, res) => {
-    console.log('im in login');
+    //console.log('im in login');
     const checkUser = await User.findOne({
       email: req.body.email.toLowerCase().trim(),
       password: req.body.password,
