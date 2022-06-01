@@ -43,5 +43,30 @@ appointmentRouter.delete(
       }
     }),
   );
+
+  appointmentRouter.get(
+    '/ViewAppointment',
+    expressAsyncHandler(async (req, res) => {
+        const appointment = await Appointment.find({ clientemail: req.body.clientemail.toLowerCase().trim()});
+      if (appointment) {
+           res.status(200).return(appointment);
+      } else {
+            res.status(401).json({ message: 'Appointment is not found' });
+      }
+    }),
+  );
+  appointmentRouter.get(
+    '/CountAppointment',
+    expressAsyncHandler(async (req, res) => {
+        const appointment = await Appointment.find({ barberemail: req.body.barberemail.toLowerCase().trim()});
+      if (appointment) {
+          let counter = appointment.length;
+          res.status(200).return(counter);
+        } 
+      else {
+            res.status(401).json({ message: 'Appointments is not found' });
+          }
+    }),
+  );
 export default appointmentRouter;
 
