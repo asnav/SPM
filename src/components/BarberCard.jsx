@@ -6,7 +6,7 @@ import avatar from '../images/barber.png';
 function BarberCard(props) {
   const navigate = useNavigate();
   return (
-    <Grow in style={{ transformOrigin: '0 0 0' }} {...({ timeout: 300 + 150 * props.id })}>
+    <Grow in style={{ transformOrigin: '0 0 0' }} {...({ timeout: 700 + 70 * props.id })}>
       <button type="button" className="cardbox" onClick={() => navigate(`/barber${props.id}`)}>
         <h4>{props.name}</h4>
         <img src={avatar} alt="barberimage" />

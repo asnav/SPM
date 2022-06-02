@@ -15,8 +15,8 @@ function App() {
 
   return (
     <div className="main">
-      <TopNavBar userType={userType} setUserType={setUserType} />
       <BrowserRouter>
+        <TopNavBar userType={userType} setUserType={setUserType} />
         <Routes>
           <Route exact path="/" element={<HomePage userType={userType} />} />
           <Route path="/login" element={<LoginPage setUserType={setUserType} />} />

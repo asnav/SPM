@@ -2,8 +2,11 @@ import { TextField, Button } from '@mui/material';
 import axios from 'axios';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { connect } from '../../userSlice.js';
 
-function LoginPage(props) {
+function LoginPage() {
+  const dispatch = useDispatch();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [passwordIsWrong, setPasswordIsWrong] = useState(false);
@@ -16,7 +19,11 @@ function LoginPage(props) {
       password,
     })
       .then(() => {
-        props.setUserType('client');
+        dispatch(connect({
+          name: 'asaf', // need to pull information from DB
+          type: 'client',
+          email,
+        }));
         navigate('/');
       })
       .catch(() => {
