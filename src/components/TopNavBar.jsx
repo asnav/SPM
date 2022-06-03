@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import {
   Navbar, Nav, Form, FormControl,
@@ -9,6 +10,7 @@ import { disconnect } from '../userSlice.js';
 
 function TopNavBar() {
   const userType = useSelector((state) => state.user.type);
+  const userName = useSelector((state) => state.user.name);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -16,12 +18,15 @@ function TopNavBar() {
     <Navbar collapseOnSelect className="my-navbar" expand="lg" variant="dark">
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Brand type="button" className="logo" onClick={() => navigate('/')}>mento.</Navbar.Brand>
-      <Nav>
-        {userType === null ? (
-          <Nav.Link className="navbar-item" onClick={() => navigate('/login')}>
-            Login
+      {userType === null ? (
+        <Nav.Link className="navbar-item" onClick={() => navigate('/login')}>
+          Login
+        </Nav.Link>
+      ) : (
+        <Navbar.Collapse className="justify-content-end">
+          <Nav.Link className="navbar-item" disabled>
+            {`Signed in as: ${userName}`}
           </Nav.Link>
-        ) : (
           <Nav.Link
             className="navbar-item"
             onClick={() => {
@@ -31,14 +36,15 @@ function TopNavBar() {
           >
             Logout
           </Nav.Link>
-        )}
-        {userType === 'barber' && (
-          <Nav.Link className="navbar-item" onClick={() => navigate('/personal_page')}>
-            My Page
-          </Nav.Link>
-        )}
-      </Nav>
-      <Navbar.Collapse className="justify-content-end">
+        </Navbar.Collapse>
+      )}
+      {userType === 'barber' && (
+        <Nav.Link className="navbar-item" onClick={() => navigate('/personal_page')}>
+          My Page
+        </Nav.Link>
+      )}
+
+      {/* <Navbar.Collapse className="justify-content-end">
         <Form className="d-flex">
           <FormControl
             type="search"
@@ -48,7 +54,7 @@ function TopNavBar() {
           />
           <Button>Search</Button>
         </Form>
-      </Navbar.Collapse>
+      </Navbar.Collapse> */}
     </Navbar>
   );
 }

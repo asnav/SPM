@@ -18,11 +18,11 @@ function LoginPage() {
       email,
       password,
     })
-      .then(() => {
+      .then((res) => {
         dispatch(connect({
-          name: 'asaf', // need to pull information from DB
-          type: 'client',
-          email,
+          name: res.data.user.fullname,
+          type: res.data.user.usertype,
+          email: res.data.user.email,
         }));
         navigate('/');
       })
